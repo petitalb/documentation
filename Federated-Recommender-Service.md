@@ -33,7 +33,7 @@ This is a test recommendation call.
 
 ###  Test Badge
 `/testBadge` (GET)
-This call produces a example partnerBadge.
+This call produces a example partner Badge.
 
 ###  Test Secure User Profile
 `/testSUP` (GET)
