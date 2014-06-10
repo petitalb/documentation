@@ -1,42 +1,41 @@
 # The Federated Recommender Service
 
-## # Reaching the Service
+##  Reaching the Service
 You can reach the Service, based on the location where the service is running,by calling 
-{host}:{port}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/recommender/{call}
+`{host}:{port}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/recommender/{call}`
 
-## # The Service Calls
+## The Service Calls
 
 All service consumes and/or produce xml and json aswell depending on which type is defined as content type 
 
 
-### # Register
-"/register" (POST)
+###  Register
+`/register` (POST)
 This is the service to register a new partner, every partner has to be queried by the system.
 Consumes a partnerBadge (example partner badge can be produced by calling /testBadge with the correct format (json/xml)), with all the information needed to connect to the partner.
 
 
 
 
-### # Get Registered Partners
- /getRegisteredPartners (GET)
+###  Get Registered Partners
+ `/getRegisteredPartners` (GET)
 Produces the list of partners registered in the System  
 
 
-### # Recommend
-/recommend (POST)
+###  Recommend
+`/recommend` (POST)
 This is the actuall recommendation call and consumes a SecureUserProfile (example can be generated with the /testSUP call).
 In this SecureUserProfile a list of servers can be integrated which will be used to query these specific partners. (The partnerBadge which you get from /getRegisteredPartners call has to be in this list)
 
-### # Test Recommend
-/testRecommend
+###  Test Recommend
+`/testRecommend` (GET)
 This is a test recommendation call
 
-### # Test Badge
-/testBadge
-This call produces a test partnerBadge
+###  Test Badge
+`/testBadge` (GET)
+This call produces a example partnerBadge
 
-### # Test Secure User Profile
-/testSUP
-This call produces a test secure user profile
-
+###  Test Secure User Profile
+`/testSUP` (GET)
+This call produces a example secure user profile
 
