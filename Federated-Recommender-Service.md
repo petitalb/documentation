@@ -29,13 +29,13 @@ In this SecureUserProfile a list of servers can be integrated which will be used
 
 ###  Test Recommend
 `/testRecommend` (GET)
-This is a test recommendation call
+This is a test recommendation call.
 
 ###  Test Badge
 `/testBadge` (GET)
-This call produces a example partnerBadge
+This call produces a example partnerBadge.
 
 ###  Test Secure User Profile
 `/testSUP` (GET)
-This call produces a example secure user profile
+This call produces a example secure user profile.
 
