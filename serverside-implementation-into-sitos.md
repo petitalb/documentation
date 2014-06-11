@@ -46,13 +46,12 @@ but i think a localy version is not necessary because user has option to limit h
 
 **informations:**
 
-plugin takes automatically the 10 most used wordes of the open pagen and gave results for them.
-Stopwords are defined hardcodet.
-if you mark a text, also the 10 most words are used of this text.
-
-for history there are two options:
-* clientside: in this case user can use only one browser, because history is saved in indexfile by browser and they have differnt once. here we have no summary of the whole history.
-* serverside: here the system needs to save history from index file to server user profile at logount and at login write it to the index file of broser. in this case its possible to user different browser.
+* plugin takes automatically the 10 most used wordes of the open pagen and gave results for them.
+* Stopwords are defined hardcodet.
+* if you mark a text, also the 10 most words are used of this text.
+* for history there are two options:
+  * clientside: in this case user can use only one browser, because history is saved in indexfile by browser and they have differnt once. here we have no summary of the whole history.
+  * serverside: here the system needs to save history from index file to server user profile at logount and at login write it to the index file of broser. in this case its possible to user different browser.
 
 
 
@@ -61,9 +60,7 @@ for history there are two options:
 **information for testing/examples:** 
 
 * /common_js/usage_examples -> only searchtext field with result list for testing and implementing example
-
 * the query is a summary of user profile, interests of the user (the lables) and the searchtext.
-
 * the query way is at the moment:
 server -> jason -> proxy -> xml -> recommander -> xml -> proxy -> jason -> server
 changed during the hackaton to: server -> jason -> proxy -> recomander -> proxy -> jason -> server
