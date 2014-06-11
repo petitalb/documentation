@@ -65,7 +65,7 @@ the query is a summary of user profile, interests of the user (the lables) and t
 
 the query way is at the moment:
 server -> jason -> proxy -> xml -> recommander -> xml -> proxy -> jason -> server
-changed during the hackaton to -> server jason -> proxy -> recomander -> proxy -> jason -> server
+changed during the hackaton to: server -> jason -> proxy -> recomander -> proxy -> jason -> server
 we don't need the translation from jason to xml and back anymore.
 
 ------------------------------
@@ -75,11 +75,8 @@ we don't need the translation from jason to xml and back anymore.
 background.html - always active, define which scripts are running in the background. 
 content.js -> which scripts are displayed on which page, at every run of the plugin this scripts are started.
 eexcess.css -> global stylesheet for the layout
-
 contextdetector.js -> in every page integrated, includes the filtering of text.
-
 content.js -> callBG function sends the searchquery.
-
 apicalls.js -> line 114 create call of profile + query to the server - line 139 privacy proxy definition which get the query.
 
 ------------------------------
