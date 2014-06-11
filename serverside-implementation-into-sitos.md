@@ -16,9 +16,7 @@ internal:
 1. which code is useable for us, or do we need to change something
 2. which browser should work (layout). firefox, IE version ?, chrome.
 3. create a script for easyier updating files if there is an update at eexcess github branch.
-4. do we need a own lokal privacy proxy. if we have the own, then we have to install it at every school, but the data of searched things and history ... is always localy and not send to everywhere.
-or we use the actually one which is not localy. then the data is send to this and used for analysing search behavior. problem is at the local option that we have to do maintance and udpate sources and so on. and we have to find a way for local implementation of it.
-but i think a localy version is not necessary because user has option to limit his profile with sending information.
+4. do we need a own lokal privacy proxy. - yes we do!
 
 
 ------------------------------
