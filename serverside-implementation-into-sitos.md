@@ -5,17 +5,18 @@
 **open questions:**
 
 global:
+
 1. development question: is there a option to do "closed" moduls for the functions we have, so that we can do easy updates into our Serversystem, to have less migration work if we have at eexcess function updates
 2. displayed thumbnails: law and rights about them to use them into the created texts in Sitos.
 
 
 internal:
+
 1. which code is useable for us, or do we need to change something
 2. which browser should work (layout). firefox, IE version ?, chrome.
 3. create a script for easyier updating files if there is an update at eexcess github branch.
 4. do we need a own lokal privacy proxy. if we have the own, then we have to install it at every school, but the data of searched things and history ... is always localy and not send to everywhere.
-or we use the actually one which is not localy. then the data is send to this and used for analysing search behavior.
-problem is at the local option that we have to do maintance and udpate sources and so on. and we have to find a way for local implementation of it.
+or we use the actually one which is not localy. then the data is send to this and used for analysing search behavior. problem is at the local option that we have to do maintance and udpate sources and so on. and we have to find a way for local implementation of it.
 but i think a localy version is not necessary because user has option to limit his profile with sending information.
 
 
@@ -59,11 +60,11 @@ for history there are two options:
 
 **information for testing/examples:** 
 
-/common_js/usage_examples -> only searchtext field with result list for testing and implementing example
+* /common_js/usage_examples -> only searchtext field with result list for testing and implementing example
 
-the query is a summary of user profile, interests of the user (the lables) and the searchtext.
+* the query is a summary of user profile, interests of the user (the lables) and the searchtext.
 
-the query way is at the moment:
+* the query way is at the moment:
 server -> jason -> proxy -> xml -> recommander -> xml -> proxy -> jason -> server
 changed during the hackaton to: server -> jason -> proxy -> recomander -> proxy -> jason -> server
 we don't need the translation from jason to xml and back anymore.
@@ -72,11 +73,11 @@ we don't need the translation from jason to xml and back anymore.
 
 **architectur of the extention: (importend files and functions for serverside implementation)**
 
-background.html - always active, define which scripts are running in the background. 
-content.js -> which scripts are displayed on which page, at every run of the plugin this scripts are started.
-eexcess.css -> global stylesheet for the layout
-contextdetector.js -> in every page integrated, includes the filtering of text.
-content.js -> callBG function sends the searchquery.
-apicalls.js -> line 114 create call of profile + query to the server - line 139 privacy proxy definition which get the query.
+* background.html - always active, define which scripts are running in the background. 
+* content.js -> which scripts are displayed on which page, at every run of the plugin this scripts are started.
+* eexcess.css -> global stylesheet for the layout
+* contextdetector.js -> in every page integrated, includes the filtering of text.
+* content.js -> callBG function sends the searchquery.
+* apicalls.js -> line 114 create call of profile + query to the server - line 139 privacy proxy definition which get the query.
 
 ------------------------------
