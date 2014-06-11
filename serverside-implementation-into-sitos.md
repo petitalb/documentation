@@ -1,8 +1,8 @@
-Documentation:
+# Documentation:
 
 ------------------------------
 
-open questions:
+**open questions:**
 
 global:
 1. development question: is there a option to do "closed" moduls for the functions we have, so that we can do easy updates into our Serversystem, to have less migration work if we have at eexcess function updates
@@ -21,7 +21,7 @@ but i think a localy version is not necessary because user has option to limit h
 
 ------------------------------
 
-steps / priority of implementation into sitos:
+**steps / priority of implementation into sitos:**
 
 1. insert manually a searchtext and get results in easywiki
 2. put result by function into the created easywiki text (picture and title with link behind)
@@ -43,7 +43,7 @@ steps / priority of implementation into sitos:
 
 ------------------------------
 
-informations:
+**informations:**
 
 plugin takes automatically the 10 most used wordes of the open pagen and gave results for them.
 Stopwords are defined hardcodet.
@@ -57,7 +57,7 @@ for history there are two options:
 
 ------------------------------
 
-information for testing/examples: 
+**information for testing/examples:** 
 
 /common_js/usage_examples -> only searchtext field with result list for testing and implementing example
 
