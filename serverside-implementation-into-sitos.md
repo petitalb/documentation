@@ -1,5 +1,5 @@
-# Documentation:
-### (of Hackaton and next steps and their priority and other information which can be importend.)
+### Documentation:
+##### (of Hackaton 06/2014 and next steps and their priority and other information which can be importend.)
 
 ------------------------------
 
