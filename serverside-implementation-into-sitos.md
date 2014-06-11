@@ -69,7 +69,7 @@ we don't need the translation from jason to xml and back anymore.
 
 ------------------------------
 
-**architectur of the extention: (importend files and functions for serverside implementation)**
+**architectur of the extention: **
 
 * background.html - always active, define which scripts are running in the background. 
 * content.js -> which scripts are displayed on which page, at every run of the plugin this scripts are started.
