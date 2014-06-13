@@ -24,7 +24,7 @@ _TODO include Source Selection (WP3 pls fill in the current status)_
 			"line1": "beyond",
 			"line2": "the hill"
 		},
-		/*Should we have user credentials?,
+		/*Shouldwehaveusercredentials?,
 		e.g."userCredentials": {
 			"Mendeley": {
 				"email": "user@example.com",
@@ -32,10 +32,8 @@ _TODO include Source Selection (WP3 pls fill in the current status)_
 			}
 		},
 		*/
-                /*Please add a compentence level (or similar) to the interest,
-		e.g.expert on recommender systems,
-		but novice to search algorithms.*/
-                "interests": [{
+		/*Please add a compentence level (or similar) to theinterest, e.g. expert on recommender systems, but novice to search algorithms.*/
+		"interests": [{
 			//concepts"text": "Recommender systems",
 			"weight": "1.0",
 			"source": "manual",
@@ -45,15 +43,15 @@ _TODO include Source Selection (WP3 pls fill in the current status)_
 		{
 			"text": "Search algorithms",
 			"weight": "1.0",
-			/*definesthesourceofthecontextinformation,
-			eithermanuallyinputbytheuserorautomaticallyinferredfrominteractionsForautomaticinferencewealsohaveaconfidencescorerangingfromo0to1.*/"source": "automatic",
+			/*defines the source of the context information, either manually input by the user or automatically inferred from interactions For automatic inference we also have a confidence score ranging fromo 0 to 1.*/
+			"source": "automatic",
 			"confidence:"0.7,
 			"uri": "http://dbpedia.org/resource/Category:Search_algorithms"
 		},
 		{
 			"text": "bratwurst",
 			"source": "manual",
-			"weight": "1.0"/*urimaynotnecessarilybepresent*/
+			"weight": "1.0"/*uri may not necessarily be present*/
 		}],
 		"context-list": {
 			"locations": [{
@@ -88,10 +86,12 @@ _TODO include Source Selection (WP3 pls fill in the current status)_
 				"reason": "manual",
 				"text": "women workforce"
 			}
-		}/*Pleasemaketheuserlocationanarray,
-		includingatimestamp.*/"user-location": {
-			"longitude": /*TODOdefinecoordinatesystem*/"latitude": ,
-			"accuracy": "100"/*inmeters", optional */
+		}
+		/*Please make the user location an array, including a timestamp.*/
+		"user-location": {
+			"longitude": /* TODO define coordinate system */
+			"latitude": ,
+			"accuracy": "100" /* in meters, optional */
     }
 }
 ```
