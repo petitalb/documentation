@@ -24,16 +24,18 @@ _TODO include Source Selection (WP3 pls fill in the current status)_
 			"line1": "beyond",
 			"line2": "the hill"
 		},
-		/*Shouldwehaveusercredentials?,
+		/*Should we have user credentials?,
 		e.g."userCredentials": {
 			"Mendeley": {
 				"email": "user@example.com",
 				"securityToken": "abcd"
 			}
 		},
-		*//*Pleaseaddacompentencelevel(orsimilar)totheinterest,
-		e.g.expertonrecommendersystems,
-		butnovicetosearchalgorithms.*/"interests": [{
+		*/
+                /*Please add a compentence level (or similar) to the interest,
+		e.g.expert on recommender systems,
+		but novice to search algorithms.*/
+                "interests": [{
 			//concepts"text": "Recommender systems",
 			"weight": "1.0",
 			"source": "manual",
