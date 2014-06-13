@@ -1,6 +1,6 @@
 # request format:
 
-_TODO include Source Selection (WP3 pls fill in the current status)_
+_TODO include Source Selection (WP3 pls fill in the current status)
 
 ```javascript
 {
@@ -24,8 +24,7 @@ _TODO include Source Selection (WP3 pls fill in the current status)_
 			"line1": "beyond",
 			"line2": "the hill"
 		},
-		/*Shouldwehaveusercredentials?,
-		e.g."userCredentials": {
+		/* Should we have user credentials?, e.g."userCredentials": {
 			"Mendeley": {
 				"email": "user@example.com",
 				"securityToken": "abcd"
