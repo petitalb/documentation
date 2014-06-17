@@ -1,6 +1,6 @@
 The following interactions are currently logged on the privacy proxy (all including a timestamp, origin (except facetScape logs) and, if sent by the extension a uuid):
 * query (+ whole user profile as shown below)
-* results (+ weighted query keywords and recommender response)
+* results (+ weighted query keywords and federated response)
 * show/hide extension (+ current url)
 * open/close result (+ result url, corresponding query, duration)
 * rating (+ resource url, rating value [1|2])
