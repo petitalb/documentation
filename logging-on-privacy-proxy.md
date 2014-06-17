@@ -1,10 +1,14 @@
-The following interactions are currently logged on the privacy proxy:
-* query (including timestamp, uuid, origin-url and whole user profile as shown below)
-* results (including timestamp, uuid, origin-url, weighted query keywords and recommender response)
+The following interactions are currently logged on the privacy proxy (all including a timestamp, origin (except facetScape logs) and, if sent by the extension a uuid):
+* query (+ whole user profile as shown below)
+* results (+ weighted query keywords and recommender response)
+* show/hide extension (+ current url)
+* open/close result (+ result url, corresponding query, duration)
+* rating (+ resource url, rating value [1|2])
+* FacetScape {mode:<"selection" | "deselection" | "include" | "exclude" | "move">,facetName,facetValue,uuid} in separate logfile
 
 
 
-User Profile logged along with a query:
+User Profile logged along with a query (as sent by the extension):
 ```javascript
 {
 	"eexcess-user-profile" : {
