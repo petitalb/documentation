@@ -13,5 +13,5 @@ What we would like to be subject to styling
 * components to consider
   * ResultList
   * Visualization Dashboard
-  * Result List
+  * FacetScape
   * User Profile Settings and Privacy Settings
