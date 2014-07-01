@@ -107,7 +107,7 @@ input:
 ```
 log entry:  
 ```
-12:12:12,899 [RATING] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe] 
+2014-07-01 12:12:12,899 [RATING] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe] 
 {
 	"uuid" : "E993A29B-A063-426D-896E-131F85193EB7",
 	"rating" : {
@@ -151,7 +151,7 @@ input:
 ```
 log entry:  
 ```
-12:13:27,958 [RESULT_VIEW] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
+2014-07-01 12:13:27,958 [RESULT_VIEW] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
 {
 	"resource" : "http://www.econbiz.de/Record/10009492734",
 	"timestamp" : 1404209607918,
@@ -184,7 +184,7 @@ input:
 ```
 log entry:  
 ```
-12:13:31,376 [RESULT_CLOSE] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
+2014-07-01 12:13:31,376 [RESULT_CLOSE] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
 {
 	"resource" : "http://www.econbiz.de/Record/10009492734",
 	"timestamp" : 1404209607918,
@@ -211,7 +211,7 @@ input ("visible:false" means, the sidebar was turned off at the currentPage):
 ```
 log entry ("visible:false" means, the sidebar was turned off at the currentPage):  
 ```
-12:14:27,280 [SHOW_HIDE] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
+2014-07-01 12:14:27,280 [SHOW_HIDE] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
 {
 	"visible" : false,
 	"uuid" : "E993A29B-A063-426D-896E-131F85193EB7",
@@ -255,7 +255,7 @@ inputs:
 ```
 log entries:  
 ```
-2014 - 07 - 01 12 : 15 : 54, 608[origin : chrome - extension : //lpelppibhjnlojepdlfpcdolbflghcfe]
+2014-07-01 12:15:54,608 [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
 	{
 		"mode" : "move",
 		"facetName" : "language",
@@ -293,7 +293,7 @@ log entries:
 
 ## query log entry
 ```
-09:47:56,002 [QUERY] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
+2014-07-01 09:47:56,002 [QUERY] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
 {
 	"eexcess-user-profile" : {
 		"history" : [{
@@ -334,7 +334,7 @@ log entries:
 
 ## result log entry
 ```
-09:47:57,706 [RESULT] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
+2014-07-01 09:47:57,706 [RESULT] [userID:E993A29B-A063-426D-896E-131F85193EB7] [origin:chrome-extension://lpelppibhjnlojepdlfpcdolbflghcfe]
 {
 	"results" : [{
 			"provider" : "ZBW",
