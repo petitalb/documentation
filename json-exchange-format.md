@@ -24,14 +24,14 @@
       "line1":"nothing",
       "line2":"to add"
    },
-"userLocations": [
-{
-"longitude": 10.5,
-"latitude": 10.5, 
-"accuracy": 1.0,
-"timestamp": 1404302589436
-    }
-],
+   "userLocations": [
+      {
+         "longitude": 10.5,
+         "latitude": 10.5, 
+         "accuracy": 1.0,
+         "timestamp": 1404302589436
+      }
+    ],
    "languages":[
       {
          "iso2":"de",
