@@ -1,7 +1,5 @@
 # request format:
 
-_TODO include Source Selection (WP3 pls fill in the current status)_
-
 ```javascript
 {
    "partnerList":[
