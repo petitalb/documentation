@@ -79,11 +79,13 @@
    "contextKeywords":[
       {
          "text":"graz",
-         "weight":0.1
+         "weight":0.1,
+         "reason":"manual"
       },
       {
          "text":"vienna",
-         "weight":0.1
+         "weight":0.1,
+         "reason":"manual"
       }
    ],
    "contextNamedEntities":{
