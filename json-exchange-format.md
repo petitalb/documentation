@@ -1,6 +1,9 @@
-In principle all fields are optional, and can be either not sent or left blank.
+# Request and Response format for call to federated recommender
 
-# request format:
+Notes: 
+* In principle all fields are optional, and can be either not sent or left blank.
+
+## request format:
 
 ```javascript
 {
@@ -165,7 +168,7 @@ In principle all fields are optional, and can be either not sent or left blank.
 }
 ```
 
-# response format
+## response format
 ```javascript
 {
   "result" : [
