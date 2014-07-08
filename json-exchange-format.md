@@ -51,7 +51,7 @@
    ],
    "history":[
       {
-         "lastVisitTime":1402472311035.249,
+         "lastVisitTime":1402472311035,
          "title":"history title",
          "typedCount":4,
          "visitCount":4,
