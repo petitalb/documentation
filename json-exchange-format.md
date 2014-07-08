@@ -1,3 +1,5 @@
+In principle all fields are optional, and can be either not sent or left blank.
+
 # request format:
 
 ```javascript
