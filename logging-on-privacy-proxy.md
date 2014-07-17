@@ -90,7 +90,7 @@ The logs for query and result do not require a specific endpoint (samples can be
 * **/log/rclose** detail view of a resource closed
 * **/log/show_hide** visibility of the sidebar toggled
 * **/log/facetScape** facetScape interaction
-* **/log/query_activated user decided to view results of a query executed in the background
+* **/log/query_activated** user decided to view results of a query executed in the background
 
 ## /log/rating
 input:
