@@ -7,6 +7,7 @@ Notes:
 
 ```javascript
 {
+   "numResults":60,
    "partnerList":[
       {
          "systemId":"Europeana"
