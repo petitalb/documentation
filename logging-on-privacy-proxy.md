@@ -8,8 +8,36 @@ The following interactions are currently logged on the privacy proxy (all includ
 * FacetScape {mode:<"selection" | "deselection" | "include" | "exclude" | "move">,facetName,facetValue,uuid} in separate logfile
 
 
+The user profile logged along with a query is basically identical to the [request format of the federated recommender](https://github.com/EEXCESS/documentation/wiki/json-exchange-format#request-format). Depending on the privacy policy, some attributes may not be given.
+In addition, the following adaptations are made if the query is sent by the extension:
+* the attribute **reason** in the entries of **contextKeywords** is omitted
+* an additional attribute **uuid** is added
+* an additional attribute **context** is added, which covers the following scenarios:
+1. A query is triggered automatically by visiting a web page
+```javascript
+"context" : {
+	"reason" : "page", // "page" indicates that the search was triggered automatically by visiting a web page
+	"context" : "http://en.wikipedia.org/wiki/Loom" // the url of the visited page
+}
+```
+2. A query is triggered automatically by selecting a piece of text
+```javascript
+"context" : {
+	"reason" : "selection", // "selection" indicates that the search was triggered automatically by a text selection
+	"context" : "A loom is a device used to weave cloth" // the selected text
+}
+```
+3. A query is triggered manually
+```javascript
+"context" : {
+	"reason" : "manual", // "manual" indicates the query is given explicitly by the user
+	"context" : "A loom is a device used to weave cloth", // contains a text selection (if any)
+	"text" : "weaving" // the actual query
+}
+```
 
-User Profile example logged along with a query (presence of attribute values depends on the privacy policy):
+
+User Profile example logged along with a query (not all possible attributes present):
 ```javascript
 {
 	"history" : [{
@@ -40,46 +68,40 @@ User Profile example logged along with a query (presence of attribute values dep
 	"contextKeywords" : [{
 			"weight" : 1,
 			"text" : "loom",
-			"reason" : "page"
 		}, {
 			"weight" : 0.4673913043478261,
 			"text" : "looms",
-			"reason" : "page"
 		}, {
 			"weight" : 0.34782608695652173,
 			"text" : "shuttle",
-			"reason" : "page"
 		}, {
 			"weight" : 0.33695652173913043,
 			"text" : "weaving",
-			"reason" : "page"
 		}, {
 			"weight" : 0.32608695652173914,
 			"text" : "warp",
-			"reason" : "page"
 		}, {
 			"weight" : 0.21739130434782608,
 			"text" : "shed",
-			"reason" : "page"
 		}, {
 			"weight" : 0.20652173913043478,
 			"text" : "weft",
-			"reason" : "page"
 		}, {
 			"weight" : 0.17391304347826086,
 			"text" : "threads",
-			"reason" : "page"
 		}, {
 			"weight" : 0.16304347826086957,
 			"text" : "heddles",
-			"reason" : "page"
 		}, {
 			"weight" : 0.15217391304347827,
 			"text" : "weaver",
-			"reason" : "page"
 		}
 	],
-	"uuid" : "52BD5C8C-C7FA-4BB5-9908-ED382C44AF6A"
+	"uuid" : "52BD5C8C-C7FA-4BB5-9908-ED382C44AF6A",
+	"context" : {
+		"reason" : "page",
+		"context" : "http://en.wikipedia.org/wiki/Loom" 
+	}
 }
 ```
 
