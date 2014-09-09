@@ -13,22 +13,22 @@ In addition, the following adaptations are made if the query is sent by the exte
 * the attribute **reason** in the entries of **contextKeywords** is omitted
 * an additional attribute **uuid** is added
 * an additional attribute **context** is added, which covers the following scenarios:
-1. A query is triggered automatically by visiting a web page
-```javascript
+	1. A query is triggered automatically by visiting a web page
+	```javascript
 "context" : {
 	"reason" : "page", // "page" indicates that the search was triggered automatically by visiting a web page
 	"context" : "http://en.wikipedia.org/wiki/Loom" // the url of the visited page
 }
 ```
-2. A query is triggered automatically by selecting a piece of text
-```javascript
+	2. A query is triggered automatically by selecting a piece of text
+	```javascript
 "context" : {
 	"reason" : "selection", // "selection" indicates that the search was triggered automatically by a text selection
 	"context" : "A loom is a device used to weave cloth" // the selected text
 }
 ```
-3. A query is triggered manually
-```javascript
+	3. A query is triggered manually
+	```javascript
 "context" : {
 	"reason" : "manual", // "manual" indicates the query is given explicitly by the user
 	"context" : "A loom is a device used to weave cloth", // contains a text selection (if any)
