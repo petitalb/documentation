@@ -19,7 +19,12 @@ Consumes a partnerBadge (example partner badge can be produced by calling /testB
 
 ###  Get Registered Partners
  `/getRegisteredPartners` (GET)
-Produces the list of partners registered in the System and some rudimentary statistics about the partners
+Produces the list of partners registered in the System and some rudimentary statistics about the partners.
+requestCount: count of requests done by the server on the partner
+failedRequestCount: failded requests of any kind (including timeouts)
+shortTimeResponseTimes: average of the last ten responses
+shortTimeResponsDeviation: deviation of the last ten responses
+longTimeResponseTimes: overall average since the server was restarted
 
 
 ###  Recommend
