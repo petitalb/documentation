@@ -19,7 +19,7 @@ Consumes a partnerBadge (example partner badge can be produced by calling /testB
 
 ###  Get Registered Partners
  `/getRegisteredPartners` (GET)
-Produces the list of partners registered in the System  
+Produces the list of partners registered in the System and some rudimentary statistics about the partners
 
 
 ###  Recommend
