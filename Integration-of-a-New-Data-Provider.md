@@ -17,16 +17,16 @@ The PartnerRecommender and the FederatedRecommender are written in JAVA. The sou
 This is the folder-structure:
 
 * Code
-** Partners
-*** EUROPEANA
-*** KIM.collect
-*** Mendeley
-*** wissenmedia
-*** ZBW
-** Recommender
-** Reference
-*** Partner-data-layer
-*** PartnerRecommender
-*** Partner-web-service
+  * Partners
+    * EUROPEANA
+    * KIM.collect
+    * Mendeley
+    * wissenmedia
+    * ZBW
+  * Recommender
+  * Reference
+    * Partner-data-layer
+    * PartnerRecommender
+    * Partner-web-service
 
 These structure and folders are used to build PartnerRecommender. In the folder “partners” implementations and configurations for the existing data providers are all already available. In the folder “reference” the API’s from WP3 und WP4 and der REST-Service of the PartnerRecommender can be found. 
