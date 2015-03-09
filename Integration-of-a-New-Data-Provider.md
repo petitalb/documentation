@@ -42,5 +42,11 @@ These structure and folders are used to build PartnerRecommender. In the folder 
   "mappingListTransformationFile":"mapperResultList.xsl",
   "mappingObjectTransformationFile":"mapperObject.xsl"
 }
-
 `
+
+The parameter partnerConnectorClass defines the JAVA-Class which will be used to call the service of the partner data store. To get data out of the partner data store it’s necessary to call the API of the partner data store. For this it’s necessary to configure an already existing PartnerConnector or implement a new one with creating a new class which implements the Interface ParnterConnectorApi.
+
+The parameter queryGeneratorClass defines the JAVA-Class which creates the query for the service. The query generator is responsible for translating the EEXCESS user profile into a query string. The user profile contains special user information as for instance special themes the user is interested in, often used keywords in queries. Details to the user profile are specified in work package 5 and therefore not part of the present deliverable. 
+For example: If a user is interested in a special theme and the user puts this into his own user profile – this is under his own responsibility in order to stick to privacy guidelines – these user profile information is added to the query request sent to the PartnerRecommender. This is a first enrichment of the result list depending on user profile information.
+
+The parameter searchEndpoint defines the URL where the service is available. The parameter transformerClass defines the JAVA-Class which transforms the results from the format of the service of the data provider to the EEXCESS format. The parameters mappingListTransformationFile and mappingObjectTransformationFile defines the transformations into the EEXCESS format for result-lists or single objects. The transformation files from the ConfigTool must be put in the sub-folder \src\main\resources\. The filenames must be the same as for the parameters mappingListTransformationFile and mappingObjectTransformationFile as configured in the PartnerRecommender-ConfigFile.
