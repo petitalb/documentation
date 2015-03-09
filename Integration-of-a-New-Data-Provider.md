@@ -30,3 +30,16 @@ This is the folder-structure:
     * Partner-web-service
 
 These structure and folders are used to build PartnerRecommender. In the folder “partners” implementations and configurations for the existing data providers are all already available. In the folder “reference” the API’s from WP3 und WP4 and der REST-Service of the PartnerRecommender can be found. 
+
+# Configure the PartnerRecommender – ConfigFile
+
+`{
+  "partnerConnectorClass": "eu.eexcess.zbw.recommender.PartnerConnector",
+  "queryGeneratorClass": "eu.eexcess.zbw.recommender.ZBWQueryGenerator",
+  "searchEndpoint": "https://api.econbiz.de/v1/search?q=${query}&xml=true",
+  "transformerClass": "eu.eexcess.zbw.datalayer.ZBWTransformer",
+  "mappingListTransformationFile":"mapperResultList.xsl",
+  "mappingObjectTransformationFile":"mapperObject.xsl"
+}
+
+`
