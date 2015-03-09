@@ -50,3 +50,9 @@ The parameter queryGeneratorClass defines the JAVA-Class which creates the query
 For example: If a user is interested in a special theme and the user puts this into his own user profile – this is under his own responsibility in order to stick to privacy guidelines – these user profile information is added to the query request sent to the PartnerRecommender. This is a first enrichment of the result list depending on user profile information.
 
 The parameter searchEndpoint defines the URL where the service is available. The parameter transformerClass defines the JAVA-Class which transforms the results from the format of the service of the data provider to the EEXCESS format. The parameters mappingListTransformationFile and mappingObjectTransformationFile defines the transformations into the EEXCESS format for result-lists or single objects. The transformation files from the ConfigTool must be put in the sub-folder \src\main\resources\. The filenames must be the same as for the parameters mappingListTransformationFile and mappingObjectTransformationFile as configured in the PartnerRecommender-ConfigFile.
+
+# Extend the FederatedRecommender
+In the next step the FederatedRecommender must be changed to call the new PartnerRecommender. Therefore open the project modules\recommender\federated-recommender-web-service and extend the method “initialize” in the Class FederatedRecommenderService. Add the new PartnerRecommender via a PartnerBadge like the already existing PartnerRecommenders are added.
+
+# Creation and Deployment of the war-File
+Build the new PartnerRecommender and the modified FederatedRecommender with maven and deploy the new war-files to the Tomcat. After deploying both web-apps, the client should also show results from the newly added data provider, if some objects matches to the information need which the client detects.
