@@ -33,7 +33,7 @@ These structure and folders are used to build PartnerRecommender. In the folder 
 
 # Configure the PartnerRecommender – ConfigFile
 
-`
+```
 {
   "partnerConnectorClass": "eu.eexcess.zbw.recommender.PartnerConnector",
   "queryGeneratorClass": "eu.eexcess.zbw.recommender.ZBWQueryGenerator",
@@ -42,7 +42,7 @@ These structure and folders are used to build PartnerRecommender. In the folder 
   "mappingListTransformationFile":"mapperResultList.xsl",
   "mappingObjectTransformationFile":"mapperObject.xsl"
 }
-`
+```
 
 The parameter partnerConnectorClass defines the JAVA-Class which will be used to call the service of the partner data store. To get data out of the partner data store it’s necessary to call the API of the partner data store. For this it’s necessary to configure an already existing PartnerConnector or implement a new one with creating a new class which implements the Interface ParnterConnectorApi.
 
