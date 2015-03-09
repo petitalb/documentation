@@ -33,7 +33,8 @@ These structure and folders are used to build PartnerRecommender. In the folder 
 
 # Configure the PartnerRecommender – ConfigFile
 
-`{
+`
+{
   "partnerConnectorClass": "eu.eexcess.zbw.recommender.PartnerConnector",
   "queryGeneratorClass": "eu.eexcess.zbw.recommender.ZBWQueryGenerator",
   "searchEndpoint": "https://api.econbiz.de/v1/search?q=${query}&xml=true",
