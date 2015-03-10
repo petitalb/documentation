@@ -1,1 +1,1 @@
-Welcome to the documentation wiki!
+# The wiki is deprecated. Please see the [EEXCESS main page](https://github.com/EEXCESS/eexcess/wiki) for documentation
