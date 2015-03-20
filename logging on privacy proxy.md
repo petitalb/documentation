@@ -100,7 +100,7 @@ User Profile example logged along with a query (not all possible attributes pres
 	"uuid" : "52BD5C8C-C7FA-4BB5-9908-ED382C44AF6A",
 	"context" : {
 		"reason" : "page",
-		"context" : "http://en.wikipedia.org/wiki/Loom" 
+		"context" : "http://en.wikipedia.org/wiki/Loom"
 	}
 }
 ```
@@ -201,6 +201,11 @@ log entry:
 	"uuid" : "E993A29B-A063-426D-896E-131F85193EB7"
 }
 ```
+Currently, for `log/rview`, there are three values for the "action" parameter (in the context of the Wordpress plugin) in use:
+* cited
+* image_embedded
+* detail_view
+
 
 ## /log/rclose
 input:
@@ -386,7 +391,7 @@ input:
 ```
 log entry:
 ```
-2014-07-17 10:59:28,305 [QUERY_ACTIVATED] [userID:52BD5C8C-C7FA-4BB5-9908-ED382C44AF6A] [origin:chrome-extension://hciiebglncblkihpbfmohaihobfhlgpp] [ip:0:0:0:0:0:0:0:1] 
+2014-07-17 10:59:28,305 [QUERY_ACTIVATED] [userID:52BD5C8C-C7FA-4BB5-9908-ED382C44AF6A] [origin:chrome-extension://hciiebglncblkihpbfmohaihobfhlgpp] [ip:0:0:0:0:0:0:0:1]
 {
 	"uuid" : "52BD5C8C-C7FA-4BB5-9908-ED382C44AF6A",
 	"queryData" : {
@@ -595,4 +600,23 @@ log entry:
 		}
 	]
 }
-``` 
+```
+
+### Using curl
+During the developement process it is sometimes desired to test the API without writing actual code. In these cases `curl` can be used like this:
+```
+curl -v -H "Accept: application/json" -H "origin: WP" -H "Content-Type: application/json" -d \
+'{ \
+	"resource":"http://www.econbiz.de/Record/10009492734", \
+	"timestamp":1404209607918, \
+	"type":"view", \
+	"context":{ \
+		"query":"loom" \
+	}, \
+	"beenRecommended":true, \
+	"action":"cited", \
+	"uuid":"E993A29B-A063-426D-896E-131F85193EB7" \
+}' \
+http://<host>:<port><path><logging endpoint>
+```
+Where `<host>`,`<port>`, `<path>` and `<logging endpoint>` must be replaced by actual values. The `-v` switch makes the output verbose. This is required, because, if the request has been processed correctly, no output appears without this flag. The `-v` flag causes `curl` to print  (among other information) the HTTP status. When the status is equal to `HTTP/1.1 200 OK` things worked as expected, otherwise they didn't.
