@@ -21,6 +21,7 @@ The new proposal includes:
 * partner response state with information if and why the partner did not respond
 
 
+
 ```javascript
 {
   "result" : [
