@@ -35,7 +35,7 @@ The new proposal includes:
       "mediaType":"image",
       "title" : "Kalkstein",
       "decription":"Lorem Ipsum",
-      "year":"1970",
+      "date":"1970",
       "language" : "de",
       "licence":"Gnu....",
       "resultGroup":[{
@@ -48,7 +48,7 @@ The new proposal includes:
                       "mediaType":"image",
                       "title" : "Kalkstein",
                       "decription":"Lorem Ipsum",
-                      "year":"1971",
+                      "date":"1971",
                       "language":"de",
                       "licence":"Gnu....",
                        }]
@@ -63,7 +63,7 @@ The new proposal includes:
       "mediaType":"image",
       "title" : "Schöckelkalk",
       "decription":"Lorem Ipsum",
-      "year":"1970",
+      "date":"1970",
       "language" : "de",
       "licence":"Gnu....",
       "resultGroup":[{
@@ -76,7 +76,7 @@ The new proposal includes:
                       "mediaType":"image",
                       "title" : "Korallenkalk",
                       "decription":"Lorem Ipsum",
-                      "year":"1971",
+                      "date":"1971",
                       "language":"de",
                       "licence":"Gnu....",
                        }]
