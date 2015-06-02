@@ -20,8 +20,9 @@ The new proposal includes:
 * the document has now it’s own “documentBadge”, sorry for the naming, which can be collected and send back in a list to get the Details of the document.
 * partner response state with information if and why the partner did not respond
 
-
-
+http://{SERVER}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/recommender/recommend
+accepts: secure user profile
+returns:
 ```javascript
 {
   "result" : [
@@ -97,3 +98,25 @@ The new proposal includes:
   "queryID":"queryIDXY001"
 }
 ```
+##Details Result:
+http://{SERVER}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/recommender/getDetails
+accepts: List of DocumentBadges
+returns:
+```javascript
+{
+  "documentBadge" : [
+    {
+          "provider": "Europeana",
+          "uri" : "http://europeana.eu/resolve/.." ,
+          "id" : "/11601/_OPENUP_MINERALOGY_NHMV_AUSTRIA_3678",
+          "details" : "........."
+        },
+        {
+          "provider": "Europeana",
+          "uri" : "http://europeana.eu/resolve/.." ,
+          "id" : "/11601/_OPENUP_MINERALOGY_NHMV_AUSTRIA_3961",
+          "details" : "........."
+        }
+}
+```
+
