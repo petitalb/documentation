@@ -21,8 +21,12 @@ The new proposal includes:
 * partner response state with information if and why the partner did not respond
 
 http://{SERVER}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/recommender/recommend
+
 accepts: secure user profile
+
 returns:
+
+
 ```javascript
 {
   "result" : [
@@ -100,8 +104,11 @@ returns:
 ```
 ##Details Result:
 http://{SERVER}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/recommender/getDetails
+
 accepts: List of DocumentBadges
+
 returns:
+
 ```javascript
 {
   "documentBadge" : [
