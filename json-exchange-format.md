@@ -7,21 +7,19 @@ Notes:
 
 ```javascript
 {
-   "numResults":60,
    "partnerList":[
       {
          "systemId":"Europeana"
       }
    ],
    "protectedPartnerList":[
-      {
-         "systemId":"Wissenmedia",
-         "partnerKey":"dsajln22sadjkl!"
-      }
+
    ],
+   "queryID":"1234COFFEE",
    "firstName":"Max",
    "lastName":"Musterman",
-   "birthDate":1404302589436,
+   "birthDate":1433924619545,
+   "numResults":null,
    "gender":"male",
    "address":{
       "country":"testcountry",
@@ -30,14 +28,10 @@ Notes:
       "line1":"nothing",
       "line2":"to add"
    },
-   "userLocations": [
-      {
-         "longitude": 10.5,
-         "latitude": 10.5, 
-         "accuracy": 1.0,
-         "timestamp": 1404302589436
-      }
-    ],
+   "timeRange":{
+      "start":"1980",
+      "end":"2000"
+   },
    "languages":[
       {
          "iso2":"de",
@@ -47,7 +41,21 @@ Notes:
          "iso2":"en",
          "competenceLevel":0.1
       }
-    ],
+   ],
+   "userLocations":[
+      {
+         "longitude":33.123123,
+         "latitude":-127.123123,
+         "accuracy":4.5,
+         "timestamp":1433924619548
+      },
+      {
+         "longitude":20.123123,
+         "latitude":-130.123123,
+         "accuracy":4.5,
+         "timestamp":1433924619548
+      }
+   ],
    "userCredentials":[
       {
          "systemId":"Wissenmedia",
@@ -57,43 +65,27 @@ Notes:
    ],
    "history":[
       {
-         "lastVisitTime":1402472311035,
+         "lastVisitTime":1433924619545,
          "title":"history title",
          "typedCount":4,
          "visitCount":4,
          "url":"http://1234.com"
       }
    ],
-   "interests":[
-      {
-         "text":"text",
-         "weight":0.1,
-         "confidence":0.1,
-         "competenceLevel":0.1,
-         "source":"source",
-         "uri":"http://dsjkdjas.de"
-      },
-      {
-         "text":"text2",
-         "weight":0.2,
-         "confidence":0.2,
-         "competenceLevel":0.2,
-         "source":"source2",
-         "uri":"http://google.de"
-      }
-   ],
    "contextKeywords":[
       {
-         "text":"graz",
-         "weight":0.1,
-         "reason":"manual"
+         "text":"women",
+         "weight":0.5
       },
       {
-         "text":"vienna",
-         "weight":0.1,
-         "reason":"manual"
+         "text":"labour",
+         "weight":0.5
       }
    ],
+   "context":{
+      "reason":"manual",
+      "value":"www.wikipedia.at"
+   },
    "contextNamedEntities":{
       "locations":[
          {
@@ -165,7 +157,25 @@ Notes:
             "uri":"http://dbpedia.url.org"
          }
       ]
-   }
+   },
+   "interests":[
+      {
+         "text":"text",
+         "weight":0.1,
+         "confidence":0.1,
+         "competenceLevel":0.1,
+         "source":"source",
+         "uri":"http://dsjkdjas.de"
+      },
+      {
+         "text":"text2",
+         "weight":0.2,
+         "confidence":0.2,
+         "competenceLevel":0.2,
+         "source":"source2",
+         "uri":"http://google.de"
+      }
+   ]
 }
 ```
 
