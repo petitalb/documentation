@@ -4,7 +4,8 @@ Notes:
 * In principle all fields are optional, and can be either not sent or left blank.
 
 ## query request format
-
+POST: http://{SERVER}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/recommender/recommend
+application/json
 ```javascript
 {
    "partnerList":[
@@ -396,7 +397,8 @@ Notes:
 
 ## details request format
 The request has to be a list of given documentBadges:
-
+POST: http://{SERVER}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/recommender/getDetails
+application/json
 ```javascript
 {
    "documentBadge":[
