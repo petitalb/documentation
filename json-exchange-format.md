@@ -168,16 +168,6 @@ Notes:
    }
 }
 ```
-
-### Interactively inspection of the response
-In order to interactively inspect the service's response you can use this command pipeline:
-```bash
-curl -v -H "Accept: application/json" -H "Content-Type: application/json" -d @<JSON FILE> \
-<SERVER URL> 2>/dev/null | python -m json.tool | less
-```
-Where <JSON FILE> is a file corresponding to the request format and <SERVER URL> is a URL pointing to a federated recommender service.
-This assumes you are using a Unix-like system and have `curl`, `python` and `less` installed.
-
 ## response format
 ```javascript
 {
@@ -343,3 +333,12 @@ This assumes you are using a Unix-like system and have `curl`, `python` and `les
   "totalResults" : 12
 }
 ```
+
+### Interactively inspection of the response
+In order to interactively inspect the service's response you can use this command pipeline:
+```bash
+curl -v -H "Accept: application/json" -H "Content-Type: application/json" -d @<JSON FILE> \
+<SERVER URL> 2>/dev/null | python -m json.tool | less
+```
+Where <JSON FILE> is a file corresponding to the request format and <SERVER URL> is a URL pointing to a federated recommender service.
+This assumes you are using a Unix-like system and have `curl`, `python` and `less` installed.
