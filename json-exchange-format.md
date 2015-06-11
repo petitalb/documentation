@@ -1,6 +1,6 @@
 # Request and Response format for call to federated recommender
 
-Notes: 
+Notes:
 * In principle all fields are optional, and can be either not sent or left blank.
 
 ## request format:
@@ -33,7 +33,7 @@ Notes:
    "userLocations": [
       {
          "longitude": 10.5,
-         "latitude": 10.5, 
+         "latitude": 10.5,
          "accuracy": 1.0,
          "timestamp": 1404302589436
       }
@@ -168,6 +168,13 @@ Notes:
    }
 }
 ```
+
+In order to interactively inspect the service's response you can use this command pipeline:
+```bash
+curl -v -H "Accept: application/json" -H "Content-Type: application/json" -d @<JSON FILE> <SERVER URL> 2>/dev/null | python -m json.tool | less
+```
+Where <JSON FILE> is a file corresponding to the request format and <SERVER URL> is a URL pointing to a federated recommender service.
+This assumes you are using a Unix-like system and have `curl`, `python` and `less` installed.
 
 ## response format
 ```javascript
