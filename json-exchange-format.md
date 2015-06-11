@@ -168,7 +168,7 @@ Notes:
    }
 }
 ```
-
+### Interactively inspection of the response
 In order to interactively inspect the service's response you can use this command pipeline:
 ```bash
 curl -v -H "Accept: application/json" -H "Content-Type: application/json" -d @<JSON FILE> <SERVER URL> 2>/dev/null | python -m json.tool | less
