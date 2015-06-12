@@ -1,6 +1,5 @@
 # Guide for Implementing new EEXCESS partner applications using an example based on Open Search and MediaWiki API
 
-[]
 ## Introduction
 What is a partner application? –
 A partner application is the part of the EEXCESS federated recommender system that is responsible for the retrieval of search results according to a given query and a search entry point. A user query is passed by the system to a partner application after being pre-processed. The partner application then performs a search request to a specific entry point, optionally translates the search result and passes it back to the federated recommender system.
@@ -39,13 +38,13 @@ We denote this implementations as *PartnerConnector* and *QueryGenerator*.
 
 | Time diagram |
 | ------------ |
-| ![Invocation and workflow of a partner connector.](./resources/partner-connector-implementation-guide/partner-interaction.png "time diagram") |
-| <a name="fig1">Fig.1.</a> Invocation and workflow of a partner connector. Highlighted parts need to be implemented.|
+| <a name="fig1"></a> ![Invocation and workflow of a partner connector.](./resources/partner-connector-implementation-guide/partner-interaction.png "time diagram") |
+| Fig.1. Invocation and workflow of a partner connector. Highlighted parts need to be implemented.|
 
 | Interfaces |
 | ------------ |
-| ![Interfaces to be implemented.](./resources/partner-connector-implementation-guide/interfaces-vs-impl.png "derivation hierarchy") |
-| <a name="fig2">Fig.2.</a> Interfaces the implementation must provide. Hightlighted parts need to be implemented.|
+| <a name="fig2"></a> ![Interfaces to be implemented.](./resources/partner-connector-implementation-guide/interfaces-vs-impl.png "derivation hierarchy") |
+| Fig.2. Interfaces the implementation must provide. Hightlighted parts need to be implemented.|
 
 #### Implementing a PartnerConnector:
 In general the implementation may consist of following steps below. A detailed sample can be found here.
@@ -55,11 +54,11 @@ In general the implementation may consist of following steps below. A detailed s
   One may use OpenSearchDocumentParser and SearchLinkSelector for that task.
   Otherwise use the searchEndpoint as described in the configuration section as is.
 + perform a query (on *queryPartner()*)
-+ prepare a valid query string i.e. by concatenating the given keywords using a *QueryGenerator*
-+ perform the query
-+ read the search result and create a new return-able *ResultList*
-+ optionally transform the result
-+ return the *ResultList*
+  + prepare a valid query string i.e. by concatenating the given keywords using a *QueryGenerator*
+  + perform the query
+  + read the search result and create a new return-able *ResultList*
+  + optionally transform the result
+  + return the *ResultList*
 
 #### Implementing a QueryGenerator:
 The query generator is rather a simple thingy. A MediaWiki API valid generator sample can be found [here](https://github.com/EEXCESS/recommender/blob/knowDev/modules/partners/opensearch/src/main/java/eu/eexcess/opensearch/querygenerator/OpensearchQueryGenerator.java "a sample query generator").
@@ -151,6 +150,3 @@ The *web.xml* file can be found in *src/main/webapp/WEB-INF/* folder.
 	</servlet-mapping>
 </web-app>
 ```
-
-
-
