@@ -468,3 +468,36 @@ application/json
 ```
 
 # Request and Response formats to interact with the Privacy Proxy
+
+## Request format
+
+There are two formats: 
+
+```javascript
+{
+   ...
+   "contextKeywords":[
+      {"text":"women", "weight":0.5}, 
+      {"text":"labour","weight":0.5}
+   ],
+   ...
+}
+```
+
+```javascript
+{
+   ...
+   "contextKeywords":[
+      [{"text":"women", "weight":0.5}, {"text":"labour","weight":0.5}],
+      [{"text":"paris", "weight":0.5}, {"text":"history","weight":0.5}],
+      [{"text":"sport", "weight":0.5}, {"text":"soccer","weight":0.5}]
+   ],
+   ...
+}
+```
+
+## Response format
+
+## Details request format
+
+## Details response format
