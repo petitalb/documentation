@@ -466,3 +466,5 @@ application/json
    ]
 }
 ```
+
+# Request and Response formats to interact with the Privacy Proxy
