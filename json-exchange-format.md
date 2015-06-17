@@ -469,11 +469,9 @@ application/json
 
 # Request and Response formats to interact with the Privacy Proxy
 
-## Request format
+## Request formats
 
-There are two formats to query the privacy proxy: QF1 and QF2. The only difference between the two comes from `contextKeywords` attribute. 
-
-The format QF1 is similar to the query request format defined in the Federated Recommender section: 
+There are two formats to query the privacy proxy: QF1 and QF2. The only difference between the two comes from `contextKeywords` attribute. QF1 is similar to the query request format defined in the Federated Recommender section: 
 ```javascript
 {
    ...
@@ -484,8 +482,7 @@ The format QF1 is similar to the query request format defined in the Federated R
    ...
 }
 ```
-
-The 
+QF2 allow defining obfuscated queries by considering bags of keywords: 
 ```javascript
 {
    ...
@@ -498,8 +495,221 @@ The
 }
 ```
 
-## Response format
+## Response formats
 
-## Details request format
+```javascript
+{
+   "provider":"federated",
+   "totalResults":10,
+   "partnerResponseState":[
+      {
+         "systemID":"Europeana",
+         "success":true
+      },
+      {
+         "systemID":"Deutsche Digitale Bibliothek",
+         "success":false,
+         "errorMessage":"Waited too long for partner system 'Deutsche Digitale Bibliothek' to respond 2972 ms "
+      },
+      {
+         "systemID":"Wikipedia-Local",
+         "success":false,
+         "errorMessage":"Waited too long for partner system 'Wikipedia-Local' to respond 2972 ms "
+      },
+      {
+         "systemID":"Wissenmedia",
+         "success":true
+      },
+      {
+         "systemID":"Mendeley",
+         "success":true
+      },
+      {
+         "systemID":"ZBW",
+         "success":false,
+         "errorMessage":"Timeout"
+      },
+      {
+         "systemID":"KIMPortal",
+         "success":true
+      }
+   ],
+   "result":[
+      {
+         "resultGroup":[
+            {
+               "documentBadge":{
+                  "id":"sl23394330",
+                  "uri":"http://service.wissens-server.com/wissensserver/view.html?a=t&r=CURRENT&i=sl23394330&s=BEP&v=eexcess&w=EEXCESS",
+                  "provider":"Wissenmedia"
+               },
+               "mediaType":"unknown",
+               "previewImage":"http://service.wissens-server.com/wissensserver/media/?a=v&c=file-system&v=ws-mediensuche&reswidth=98&resheight=98&width=100&height=100&origin=center&border=1x1&background=FAFAFA&bordercolor=ddd&u=jadis/incoming/1569868.jpg",
+               "title":"Computer",
+               "description":"ComputerComputer [kɔmˈpjuːtər; englisch, zu to compute »(be)rechnen«, von lateinisch computare] der, -s/-, Rechner, Datenverarbeitungsanlage, Abkürzung DVA, elektronisch arbeitende Einrichtung, die Probleme dadurch löst, dass sie...",
+               "date":"2014-04-28T07:55:00Z",
+               "language":"de",
+               "licence":"restricted"
+            }
+         ],
+         "documentBadge":{
+            "id":"sl23394330",
+            "uri":"http://service.wissens-server.com/wissensserver/view.html?a=t&r=CURRENT&i=sl23394330&s=BEP&v=eexcess&w=EEXCESS",
+            "provider":"Wissenmedia"
+         },
+         "mediaType":"unknown",
+         "previewImage":"http://service.wissens-server.com/wissensserver/media/?a=v&c=file-system&v=ws-mediensuche&reswidth=98&resheight=98&width=100&height=100&origin=center&border=1x1&background=FAFAFA&bordercolor=ddd&u=jadis/incoming/1569868.jpg",
+         "title":"Computer",
+         "description":"ComputerComputer [kɔmˈpjuːtər; englisch, zu to compute »(be)rechnen«, von lateinisch computare] der, -s/-, Rechner, ...",
+         "date":"2014-04-28T07:55:00Z",
+         "language":"de",
+         "licence":"restricted"
+      },
+      {
+         "resultGroup":[
 
-## Details response format
+         ],
+         "documentBadge":{
+            "id":"/9200386/BibliographicResource_3000095846216",
+            "uri":"http://europeana.eu/resolve/record/9200386/BibliographicResource_3000095846216",
+            "provider":"Europeana"
+         },
+         "mediaType":"unknown",
+         "previewImage":"http://europeanastatic.eu/api/image?uri=http%3A%2F%2Fbsb0mdz-upload.bsb.lrz.de%2F%7Eeuropeana%2Fbsb11072436%2Fdownload%2Fthumbs%2Fbsb11072436_00023.jpg&size=LARGE&type=TEXT",
+         "title":"The works of Lord Byron complete in one volumeThe works",
+         "date":"unknown",
+         "language":"de",
+         "licence":"http://www.europeana.eu/rights/out-of-copyright-non-commercial/"
+      },
+      {
+         "resultGroup":[
+
+         ],
+         "documentBadge":{
+            "id":"DIST_000004550",
+            "uri":"http://www.kim.bl.openinteractive.ch/sammlungen#6a06900a-68fa-4d5f-82d5-6290264cafaa",
+            "provider":"KIMPortal"
+         },
+         "mediaType":"unknown",
+         "previewImage":"https://kgapi.bl.ch/media/kim-collect/resources/images/thumbs/6a06900a-68fa-4d5f-82d5-6290264cafaa_0001.jpg",
+         "title":"Fotografie, Zeichnung von Georg Herwegh (Foto)",
+         "description":"Burg (oder Stadteingang) über Mauer und Fels. Davor freies Feld mit Bauer, Kuh und Ziege. Im Hintergrund ein rosses Kreuz. Auf der Rückseite handschriftlicher Eintrag .....",
+         "date":"unknown",
+         "language":"de",
+         "licence":"\n\t\t\t\t\t\t\t    http://creativecommons.org/licenses/by-nc-sa/4.0/\n\t\t\t\t\t\t\t"
+      },
+      {
+         "resultGroup":[
+
+         ],
+         "documentBadge":{
+            "id":"/9200386/BibliographicResource_3000044999678",
+            "uri":"http://europeana.eu/resolve/record/9200386/BibliographicResource_3000044999678",
+            "provider":"Europeana"
+         },
+         "mediaType":"unknown",
+         "previewImage":"http://europeanastatic.eu/api/image?uri=http%3A%2F%2Fbsb0mdz-upload.bsb.lrz.de%2F%7Eeuropeana%2Fbsb10745363%2Fdownload%2Fthumbs%2Fbsb10745363_00027.jpg&size=LARGE&type=TEXT",
+         "title":"The Works of Lord Byron complete in one volumeThe works",
+         "date":"unknown",
+         "language":"de",
+         "licence":"http://www.europeana.eu/rights/out-of-copyright-non-commercial/"
+      },
+      {
+         "resultGroup":[
+
+         ],
+         "documentBadge":{
+            "id":"10001571124",
+            "uri":"http://www.econbiz.de/Record/10001571124",
+            "provider":"ZBW"
+         },
+         "mediaType":"unknown",
+         "title":"Frauen - Technik - Evaluation : Frauenförderung als Qualitätskriterium in technisch-naturwissenschaftlichen Studiengängen; Bonn, 6./7. Juli 2000 ; [diese Publikation ist im Rahmen des Projektes Qualitätssicherung entstanden]",
+         "date":"2001",
+         "language":"de",
+         "licence":"restricted"
+      },
+      {
+         "resultGroup":[
+
+         ],
+         "documentBadge":{
+            "id":"34a40c2f-7850-365a-af5b-1253dfc0e028",
+            "uri":"http://www.mendeley.com/research/critique-lovelace-metaanalysis",
+            "provider":"mendeley"
+         },
+         "mediaType":"unknown",
+         "title":"Critique of Lovelace Meta-Analysis",
+         "date":"2007",
+         "language":"unknown",
+         "licence":"https://creativecommons.org/licenses/by/3.0/legalcode"
+      },
+      {
+         "resultGroup":[
+
+         ],
+         "documentBadge":{
+            "id":"DIST_000003457",
+            "uri":"http://www.kim.bl.openinteractive.ch/sammlungen#9ef343c7-aa70-487f-bcbe-64a5bdf1affa",
+            "provider":"KIMPortal"
+         },
+         "mediaType":"unknown",
+         "title":"Notizbuch",
+         "description":"Notizbuch (kleinformatig), brauner Ledereinband und goldener Verschluss. Text auf 52 Seiten.",
+         "date":"unknown",
+         "language":"de",
+         "licence":"\n\t\t\t\t\t\t\t    http://creativecommons.org/licenses/by-nc-sa/4.0/\n\t\t\t\t\t\t\t"
+      },
+      {
+         "resultGroup":[
+
+         ],
+         "documentBadge":{
+            "id":"1ec04663-27ad-3292-aff5-163b9bea9fab",
+            "uri":"http://www.mendeley.com/research/byrons-voice",
+            "provider":"mendeley"
+         },
+         "mediaType":"unknown",
+         "title":"Byron's Voice",
+         "date":"2010",
+         "language":"unknown",
+         "licence":"https://creativecommons.org/licenses/by/3.0/legalcode"
+      },
+      {
+         "resultGroup":[
+
+         ],
+         "documentBadge":{
+            "id":"10010480859",
+            "uri":"http://www.econbiz.de/Record/10010480859",
+            "provider":"ZBW"
+         },
+         "mediaType":"unknown",
+         "title":"Taking the Lord's Name in Vain: The Impact of Connected Directors on 19th Century British Banks",
+         "description":"This paper utilizes data on the presence of prominent individualsthat is, those with political (e.g., Members of Parliament) and aristocratic titles (e.g., lords)--...",
+         "date":"2014",
+         "language":"de",
+         "licence":"restricted"
+      },
+      {
+         "resultGroup":[
+
+         ],
+         "documentBadge":{
+            "id":"/9200386/BibliographicResource_3000045256289",
+            "uri":"http://europeana.eu/resolve/record/9200386/BibliographicResource_3000045256289",
+            "provider":"Europeana"
+         },
+         "mediaType":"unknown",
+         "previewImage":"http://europeanastatic.eu/api/image?uri=http%3A%2F%2Fbsb0mdz-upload.bsb.lrz.de%2F%7Eeuropeana%2Fbsb10701385%2Fdownload%2Fthumbs%2Fbsb10701385_00025.jpg&size=LARGE&type=TEXT",
+         "title":"The poetical works of Lord Byron With Life. 6 engravings on steel",
+         "date":"unknown",
+         "language":"de",
+         "licence":"http://www.europeana.eu/rights/out-of-copyright-non-commercial/"
+      }
+   ]
+}
+
+## Details request and response formats
+
+These formats are similar to those defined in the Federated Recommender section. 
