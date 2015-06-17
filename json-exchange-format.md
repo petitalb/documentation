@@ -471,8 +471,9 @@ application/json
 
 ## Request format
 
-There are two formats: 
+There are two formats to query the privacy proxy: QF1 and QF2. The only difference between the two comes from `contextKeywords` attribute. 
 
+The format QF1 is similar to the query request format defined in the Federated Recommender section: 
 ```javascript
 {
    ...
@@ -484,6 +485,7 @@ There are two formats:
 }
 ```
 
+The 
 ```javascript
 {
    ...
