@@ -8,34 +8,83 @@ POST: http://{SERVER}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/rec
 application/json
 ```javascript
 {
+   /*List of selected partners for this query. */
+   /*If the list is empty all registered partners, except if source selection is switched on, are queried. May be left empty.*/
+   /*Considered is only the SystemID of the given partnerbadge which has to be unique.*/
+   /*Datatype: PartnerBadge*/
    "partnerList":[
       {
+         /*System ID of the partner. Has to be unique in the system.*/
+         /*Datatype: String*/
          "systemId":"Europeana"
       }
    ],
+   /*List of Partners that are "protected" by a partnerKey to query them. May be left empty.*/
+   /*Datatype: PartnerBadge.*/
    "protectedPartnerList":[
-
+         /*System ID of the partner. Has to be unique in the system.*/
+         /*Datatype: String*/
+         "systemId":"Europeana"
+         /*Partner Key of the partner.*/
+         /*Datatype: String*/
+         "partnerKey":"ycz!djklasnbm2ia"
    ],
+   /*ID for the query. Is returned in the results to map queries to results. May be left empty.*/
+   /*Datatype: String*/
    "queryID":"1234COFFEE",
+   /*First name of the User.  May be left empty.*/
+   /*Datatype: String*/
    "firstName":"Max",
+   /*Last name of the User.  May be left empty.*/
+   /*Datatype: String*/
    "lastName":"Musterman",
+   /*Date of birth of the user. May be left empty.*/
+   /*Datatype: Integer*/
    "birthDate":1433924619545,
-   "numResults":null,
-   "gender":"male",
+   /*Amount of items the result should return. Default is 10*/
+   /*Datatype: Integer*/
+   "numResults":10,
+   /*Gender of the User. May be left empty.*/
+   /*Datatype: String*/
+   "gender":"female",
+   /*Address of the User. May be left empty.*/
+   /*Datatype: Address*/ 
    "address":{
+      /*Country of the user. May be left empty.*/
+      /*Datatype: String*/
       "country":"testcountry",
+      /*Zip code of the user. May be left empty.*/
+      /*Datatype: Integer*/
       "zipCode":1213345,
+      /*City of the user. May be left empty.*/
+      /*Datatype: String*/
       "city":"testcity",
+      /*Additional information. May be left empty.*/
+      /*Datatype: String*/
       "line1":"nothing",
+      /*Additional information. May be left empty.*/
+      /*Datatype: String*/
       "line2":"to add"
    },
+   /*Time range of the query if supported by the partners search engine. May be left empty.*/
+   /*Datatype: TimeRange*/
    "timeRange":{
+      /*Start date of the query*/
+      /*Datatype: String*/
       "start":"1980",
+      /*End date of the query*/
+      /*Datatype: String*/
       "end":"2000"
    },
+   /*Spoken language of the user. Partners that don't support the language will be left out. May be left empty.*/
+   /*Datatype: Language*/
    "languages":[
       {
+         /*Language in iso format.*/
+         /*Datatype: String*/
          "iso2":"de",
+         /*Level of competence for weighting.*/
+         /*Datatype: Double*/
          "competenceLevel":0.1
       },
       {
@@ -43,11 +92,21 @@ application/json
          "competenceLevel":0.1
       }
    ],
+   /*Locations of the user. Results might be filtered depending on the locations. May be left empty.*/
+   /*Datatype: UserLocation*/
    "userLocations":[
       {
+         /*Longitude of the location.*/
+         /*Datatype: Double*/
          "longitude":33.123123,
+         /*Latitude of the location.*/
+         /*Datatype: Double*/
          "latitude":-127.123123,
+         /*Accuracy level of the location.*/
+         /*Datatype: Double*/
          "accuracy":4.5,
+         /*Timestamp of the location.*/
+         /*Datatype: Integer*/
          "timestamp":1433924619548
       },
       {
@@ -57,25 +116,52 @@ application/json
          "timestamp":1433924619548
       }
    ],
+   /*List of Partners that are "protected" by a partnerKey to query them. May be left empty.*/
+   /*Datatype: PartnerBadge*/
    "userCredentials":[
       {
+         /*System ID of the partner. Has to be unique in the system.*/
+         /*Datatype: String*/
          "systemId":"Wissenmedia",
+         /*Login name*/
+         /*Datatype: String*/
          "login":"me@partner.x",
+         /*Security Token or password*/
+         /*Datatype: String*/
          "securityToken":"sdjalkej21!#"
       }
    ],
+   /*History of the user's visited pages. May be left empty.*/
+   /*Datatype: History*/
    "history":[
       {
+         /*Last visited time of the given page*/
+         /*Datatype: Integer*/
          "lastVisitTime":1433924619545,
+         /*Title of the given page*/
+         /*Datatype: String*/
          "title":"history title",
+         /*How often the user has typed the URL*/
+         /*Datatype: Integer*/
          "typedCount":4,
+         /*Datatype: Integer*/
+         /*How often the user has visited the URL*/
+         /*Datatype: Integer*/
          "visitCount":4,
+         /*The actuall URL*/
+         /*Datatype: String*/
          "url":"http://1234.com"
       }
    ],
+   /*The actual query terms. At least one has to be there*/
+   /*Datatype: Contextkeyword*/
    "contextKeywords":[
       {
+         /*Keyword or phrase, phrases might be handled differently depending on the partner (as conjunctive query).*/
+         /*Datatype: String*/
          "text":"women",
+         /*Weight of the query term or phrase.*/
+         /*Datatype: Double*/
          "weight":0.5
       },
       {
@@ -83,16 +169,34 @@ application/json
          "weight":0.5
       }
    ],
+   /*The context of the given contextkeywords. May be left empty.*/
+   /*Datatype: Context*/
    "context":{
+      /*Reason for the query generation. Might be automaticly extraced or manualy entered.*/
+      /*Datatype: String*/
       "reason":"manual",
+      /*Additional value. E.g. the Page from which the query was generated*/
+      /*Datatype: String*/
       "value":"www.wikipedia.at"
    },
+   /*Named entities found in the users context.  May be left empty.*/
+   /*Datatype: ContextNamedEntity*/
    "contextNamedEntities":{
+      /*Locations found in the context*/
+      /*Datatype: ContextNamedEntitiesElement*/
       "locations":[
-         {
+         {  
+            /*Actuall description of the named entity*/
+            /*Datatype: String*/
             "text":"graz",
+            /*Weight of the named entity*/
+            /*Datatype: Double*/
             "weight":0.1,
+            /*Confidence level of the named entity*/
+            /*Datatype: Double*/
             "confidence":0.1,
+            /*DBPedia URI of the named entity*/
+            /*Datatype: String*/
             "uri":"http://dbpedia.url.org"
          },
          {
@@ -102,6 +206,8 @@ application/json
             "uri":"http://dbpedia.url.org"
          }
       ],
+      /*See Locations*/
+      /*Datatype: ContextNamedEntitiesElement*/
       "persons":[
          {
             "text":"Michael Jackson",
@@ -116,6 +222,7 @@ application/json
             "uri":"http://dbpedia.url.org"
          }
       ],
+      /*See Locations*/
       "organizations":[
          {
             "text":"know-center",
@@ -130,6 +237,7 @@ application/json
             "uri":"http://dbpedia.url.org"
          }
       ],
+      /*See Locations*/
       "misc":[
          {
             "text":"something",
@@ -144,6 +252,7 @@ application/json
             "uri":"http://dbpedia.url.org"
          }
       ],
+      /*See Locations*/
       "topics":[
          {
             "text":"Trees",
@@ -159,13 +268,27 @@ application/json
          }
       ]
    },
+   /*Interests of the user. Might be added to the query depending on the used query formulation algorithms. May be left empty.*/
+   /*Datatype: Interest*/
    "interests":[
       {
+         /*Entered interest text*/
+         /*Datatype: String*/
          "text":"text",
+         /*User might give a weight to the interest. May be left empty.*/
+         /*Datatype: String*/
          "weight":0.1,
+         /*User might give a confidence of the competence level. May be left empty.*/
+          /*Datatype: String*/
          "confidence":0.1,
-         "competenceLevel":0.1,
+         /*User might give a competence level. May be left empty.*/
+         /*Datatype: Double*/
+         "competenceLevel":0.1
+         /*Possible source of the interest. May be left empty.*/
+         /*Datatype: String*/,
          "source":"source",
+         /*Possible URI to the interest*/
+         /*Datatype: String*/
          "uri":"http://dsjkdjas.de"
       },
       {
