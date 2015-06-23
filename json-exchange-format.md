@@ -305,17 +305,29 @@ application/json
 ## query response format
 ```javascript
 {
+   /*Might contain further information how the system generated the given result list*/
+    /*Datatype: String*/
    "provider":"federated",
+   /*Amout of returned results*/
+    /*Datatype: Integer*/
    "totalResults":10,
+   /*Contains information which partner returned results and why if it didn't return results*/
+   /*Datatype:  PartnerResponseState*/
    "partnerResponseState":[
+      {  
+         /*The unique system id of the partner.*/
+         /*Datatype:  String*/
+         "systemID":"Deutsche Digitale Bibliothek",
+         /*Returns if the partner had some error.*/
+         /*Datatype:  Boolean*/
+         "success":false,
+         /*Errormessage of the system if there was some error.*/
+         /*Datatype:  String*/
+         "errorMessage":"Waited too long for partner system 'Deutsche Digitale Bibliothek' to respond 2972 ms "
+      },
       {
          "systemID":"Europeana",
          "success":true
-      },
-      {
-         "systemID":"Deutsche Digitale Bibliothek",
-         "success":false,
-         "errorMessage":"Waited too long for partner system 'Deutsche Digitale Bibliothek' to respond 2972 ms "
       },
       {
          "systemID":"Wikipedia-Local",
@@ -340,8 +352,12 @@ application/json
          "success":true
       }
    ],
+   /*Returned Results of the partner systems aggregated in one list.*/
+   /*Datatype: Result*/
    "result":[
-      {
+      {  
+         /*Group of too similar results that didn't end up in the result list for that reason.*/
+         /*Datatype: Result*/
          "resultGroup":[
             {
                "documentBadge":{
@@ -358,17 +374,39 @@ application/json
                "licence":"restricted"
             }
          ],
+         /*The indentifier of the document.*/
+         /*Datatype: DocumentBadge*/
          "documentBadge":{
+            /*Document identifier*/
+            /*Datatype: String*/
             "id":"sl23394330",
+            /*Uri of the document*/
+            /*Datatype: String*/
             "uri":"http://service.wissens-server.com/wissensserver/view.html?a=t&r=CURRENT&i=sl23394330&s=BEP&v=eexcess&w=EEXCESS",
+            /*Source which produced the result./
+            /*Datatype: String*/
             "provider":"Wissenmedia"
          },
+         /*Media type like image or video and so on.*/
+         /*Datatype: String*/
          "mediaType":"unknown",
+         /*Link to a previewimage if avaiable.*/
+         /*Datatype: String*/
          "previewImage":"http://service.wissens-server.com/wissensserver/media/?a=v&c=file-system&v=ws-mediensuche&reswidth=98&resheight=98&width=100&height=100&origin=center&border=1x1&background=FAFAFA&bordercolor=ddd&u=jadis/incoming/1569868.jpg",
+         /*Title of the document.*/
+         /*Datatype: String*/
          "title":"Computer",
+         /*Description or snippet of the document.*/
+         /*Datatype: String*/
          "description":"ComputerComputer [kɔmˈpjuːtər; englisch, zu to compute »(be)rechnen«, von lateinisch computare] der, -s/-, Rechner, ...",
+         /*Date of the document dependent on which date the source has in the.*/
+         /*Datatype: String*/
          "date":"2014-04-28T07:55:00Z",
+         /*Language of the document, should be in ISO 639-1 format*/
+         /*Datatype: String*/
          "language":"de",
+         /*Licence of the given document*/
+         /*Datatype: String*/
          "licence":"restricted"
       },
       {
@@ -532,12 +570,21 @@ The request has to be a list of given documentBadges:
 POST: http://{SERVER}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/recommender/getDetails
 application/json
 ```javascript
-{
+
+{  
+   /*List of document badges for which the system should return the detail.*/
+   /*Datatype: DocumentBadge*/
    "documentBadge":[
       {
-         "id":"/9200134/BibliographicResource_2000000012526",
-         "uri":"http://europeana.eu/resolve/record/9200134/BibliographicResource_2000000012526",
-         "provider":"Europeana"
+            /*Document identifier*/
+            /*Datatype: String*/
+            "id":"sl23394330",
+            /*Uri of the document*/
+            /*Datatype: String*/
+            "uri":"http://service.wissens-server.com/wissensserver/view.html?a=t&r=CURRENT&i=sl23394330&s=BEP&v=eexcess&w=EEXCESS",
+            /*Source which produced the result./
+            /*Datatype: String*/
+            "provider":"Wissenmedia"
       },
       {
          "id":"sl23428166",
@@ -567,6 +614,8 @@ application/json
 
 ```javascript
 {
+   /*List of document badges containing the details.*/
+   /*Datatype: DocumentBadge*/
    "documentBadge":[
       {
          "id":"/9200134/BibliographicResource_2000000012526",
