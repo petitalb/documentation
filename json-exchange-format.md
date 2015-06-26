@@ -638,6 +638,180 @@ application/json
    ]
 }
 ```
+## Get the registered partners and their statistics
+GET: http://{SERVER}/eexcess-federated-recommender-web-service-1.0-SNAPSHOT/recommender/getRegisteredPartners
+application/json
+```javascript
+/*List of partners registered in the system.*/
+/*Datatype: PartnerBadgeList*/
+{
+  /*Number of partners registered in the system*/
+  /*Datatype: Integer*/
+  "totalPartners": 8,
+  /*List of the partners with statistics*/
+  /*Datatype: PartnerBadge*/
+  "partner": [
+    {
+      "systemId": "Wikipedia-Local",
+      "queryGeneratorClass": "eu.eexcess.partnerrecommender.reference.LuceneQueryGenerator",
+      "partnerConnectorEndpoint": "http://127.0.0.1/eexcess-partner-reference-wikipedia-local-1.0-SNAPSHOT/partner/",
+      "shortTimeStats": {
+        "requestCount": 4,
+        "failedRequestCount": 1,
+        "failedRequestTimeoutCount": 0,
+        "lastQueries": [
+          {
+            "partnerQuery": "query<",
+            "partnerCallTime": 1202,
+            "firstTransformationTime": 0,
+            "secondTransformationTime": 0,
+            "enrichmentTime": 0,
+            "resultCount": 9
+          }
+        ],
+        "shortTimeResponseTimes": 470
+      },
+      "longTimeStats": {
+        "requestCount": 5118,
+        "failedRequestCount": 1560,
+        "failedRequestTimeoutCount": 1556,
+        "lastQueries": []
+      },
+      "languageContent": [
+        "en"
+      ]
+    },
+    {
+      "systemId": "Deutsche Digitale Bibliothek",
+      "queryGeneratorClass": "eu.eexcess.partnerrecommender.reference.OrQueryGeneratorFieldTermConjunction",
+      "partnerConnectorEndpoint": "http://127.0.0.1/eexcess-partner-ddb-1.0-SNAPSHOT/partner/",
+      "shortTimeStats": {
+        "requestCount": 0,
+        "failedRequestCount": 0,
+        "failedRequestTimeoutCount": 0,
+        "lastQueries": []
+      },
+      "longTimeStats": {
+        "requestCount": 22,
+        "failedRequestCount": 22,
+        "failedRequestTimeoutCount": 2,
+        "lastQueries": []
+      },
+      "languageContent": []
+    },
+    {
+      "systemId": "KIMPortal",
+      "queryGeneratorClass": "eu.eexcess.kimportal.recommender.KIMPortalQueryGenerator",
+      "partnerConnectorEndpoint": "http://127.0.0.1/eexcess-partner-kimportal-1.0-SNAPSHOT/partner/",
+      "shortTimeStats": {
+        "requestCount": 0,
+        "failedRequestCount": 0,
+        "failedRequestTimeoutCount": 0,
+        "lastQueries": []
+      },
+      "longTimeStats": {
+        "requestCount": 437,
+        "failedRequestCount": 128,
+        "failedRequestTimeoutCount": 46,
+        "lastQueries": []
+      },
+      "languageContent": []
+    },
+    {
+      "systemId": "Mendeley",
+      "queryGeneratorClass": "eu.eexcess.partnerrecommender.reference.LuceneQueryGeneratorFieldTermConjunction",
+      "partnerConnectorEndpoint": "http://127.0.0.1/eexcess-partner-mendeley-1.0-SNAPSHOT/partner/",
+      "shortTimeStats": {
+        "requestCount": 0,
+        "failedRequestCount": 0,
+        "failedRequestTimeoutCount": 0,
+        "lastQueries": []
+      },
+      "longTimeStats": {
+        "requestCount": 5845,
+        "failedRequestCount": 1369,
+        "failedRequestTimeoutCount": 1205,
+        "lastQueries": []
+      },
+      "languageContent": [
+        "en"
+      ]
+    },
+    {
+      "systemId": "Europeana",
+      "queryGeneratorClass": "eu.eexcess.partnerrecommender.reference.OrQueryGeneratorFieldTermConjunction",
+      "partnerConnectorEndpoint": "http://127.0.0.1/eexcess-partner-europeana-1.0-SNAPSHOT/partner/",
+      "shortTimeStats": {
+        "requestCount": 0,
+        "failedRequestCount": 0,
+        "failedRequestTimeoutCount": 0,
+        "lastQueries": []
+      },
+      "longTimeStats": {
+        "requestCount": 6715,
+        "failedRequestCount": 2527,
+        "failedRequestTimeoutCount": 2093,
+        "lastQueries": []
+      },
+      "languageContent": []
+    },
+    {
+      "systemId": "Wissenmedia",
+      "queryGeneratorClass": "eu.eexcess.partnerrecommender.reference.LuceneQueryGeneratorFieldTermConjunction",
+      "partnerConnectorEndpoint": "http://127.0.0.1/eexcess-partner-wissenmedia-1.0-SNAPSHOT/partner/",
+      "shortTimeStats": {
+        "requestCount": 0,
+        "failedRequestCount": 0,
+        "failedRequestTimeoutCount": 0,
+        "lastQueries": []
+      },
+      "longTimeStats": {
+        "requestCount": 6700,
+        "failedRequestCount": 2040,
+        "failedRequestTimeoutCount": 1836,
+        "lastQueries": []
+      },
+      "languageContent": []
+    },
+    {
+      "systemId": "ZBW",
+      "queryGeneratorClass": "eu.eexcess.partnerrecommender.reference.OrQueryGeneratorFieldTermConjunction",
+      "partnerConnectorEndpoint": "http://127.0.0.1/eexcess-partner-zbw-1.0-SNAPSHOT/partner/",
+      "shortTimeStats": {
+        "requestCount": 0,
+        "failedRequestCount": 0,
+        "failedRequestTimeoutCount": 0,
+        "lastQueries": []
+      },
+      "longTimeStats": {
+        "requestCount": 6654,
+        "failedRequestCount": 2618,
+        "failedRequestTimeoutCount": 2258,
+        "lastQueries": []
+      },
+      "languageContent": []
+    },
+    {
+      "systemId": "Opensearch",
+      "queryGeneratorClass": "eu.eexcess.opensearch.querygenerator.OpensearchQueryGenerator",
+      "partnerConnectorEndpoint": "http://127.0.0.1/eexcess-partner-reference-opensearch-1.0-SNAPSHOT/partner/",
+      "shortTimeStats": {
+        "requestCount": 0,
+        "failedRequestCount": 0,
+        "failedRequestTimeoutCount": 0,
+        "lastQueries": []
+      },
+      "longTimeStats": {
+        "requestCount": 6483,
+        "failedRequestCount": 1387,
+        "failedRequestTimeoutCount": 1325,
+        "lastQueries": []
+      },
+      "languageContent": []
+    }
+  ]
+}
+```
 
 # Request and Response formats to interact with the Privacy Proxy
 
