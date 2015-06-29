@@ -867,4 +867,4 @@ RF2 embeds several result sets. Each result set correspond to a bag of keyword d
 
 ## Details request and response formats
 
-These formats are similar to those defined in the Federated Recommender section. 
+These formats are similar to those defined in the Federated Recommender section. These formats are refered to as QF3 and RF3. 
