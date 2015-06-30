@@ -79,6 +79,9 @@ This configuration sample explains the parameters:
 
   /* fully qualified class name of the partner connector implementation */
   "partnerConnectorClass": "eu.eexcess.opensearch.recommender.PartnerConnector",
+  
+  /* language(s) the search endpoint provides content */
+  "languageContent" : ["de", "en", "ro", "ru"],
 
   /* search engine endpoint; in case of open search a link to the description document */
   "searchEndpoint" : "http://en.wikipedia.org/w/opensearch_desc.php" ,
