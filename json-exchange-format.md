@@ -828,7 +828,7 @@ There are two formats to query the privacy proxy: QF1 and QF2. The only differen
    ...
 }
 ```
-QF2 allow defining obfuscated queries by considering bags of keywords: 
+QF2 allows defining obfuscated queries by considering bags of keywords: 
 ```javascript
 {
    ...
